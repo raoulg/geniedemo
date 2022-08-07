@@ -1,0 +1,25 @@
+<h1>{{message}}</h1>
+<header class="st-header q-pa-sm">
+    <h1 class="st-header__title text-h3">Sentiment explorer</h1>
+</header>
+<div class="row">
+    <div class="col col-2">
+        <q-select v-model="filter_campaigns" :options="campaigns" :label="&quot;campaign&quot;"></q-select>
+        <header class="st-header q-pa-sm"></header>
+        <q-select v-model="filter_influencers" :options="influencers" :label="&quot;Influencer&quot;"></q-select>
+        <header class="st-header q-pa-sm"></header>Column 1 content
+    </div>
+    <div class="col col-4 col-sm">
+        <plotly :data="[{
+      x: ['giraffes', 'orangutans', 'monkeys'],
+      y: [20, 14, 23],
+      type: 'bar'
+    }]"></plotly>
+        <q-table v-model="commentstable" title="&quot;comments&quot;" row-key="" grid="" flat=""></q-table>Column 2 content
+    </div>
+    <div class="col col-3">
+        <q-img></q-img>
+        <p>Default content</p>Column 3 content
+    </div>
+</div>
+<div class="row"></div>
