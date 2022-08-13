@@ -15,7 +15,7 @@
       y: [20, 14, 23],
       type: 'bar'
     }]"></plotly>
-        <q-table v-model="commentstable" title="&quot;comments&quot;" row-key="" grid="" flat=""></q-table>Column 2 content
+         <q-table :columns="commentstable.columns_commentstable" :data="commentstable.data_commentstable"></q-table>Column 2 content
     </div>
     <div class="col col-3">
         <q-img></q-img>
